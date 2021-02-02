@@ -1,0 +1,3 @@
+#cambiar página de inicio por defecto
+
+DirectoryIndex ./landingpage.php
