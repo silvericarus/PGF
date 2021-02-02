@@ -1,3 +1,5 @@
+<?php session_start();
+ ?>
 <?php 
 	include "php/helpers.php";
 
@@ -9,8 +11,9 @@
     <meta charset="UTF-8">
     <!--<link rel="icon" href="img/favicon.png" type="image/png" sizes="32x32">-->
     <title>Bienvenido | PGF</title>
-    <link rel="stylesheet" href="css/bulma.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link async rel="stylesheet" href="css/bulma.min.css">
+    <link async rel="stylesheet" href="css/main.css">
+    
 
     <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
  </head>
@@ -18,7 +21,7 @@
  <!--Barra navegación-->
  	<nav class="navbar is-pgf-primary" role="navigation" aria-label="main navigation">
  		<div class="navbar-brand">
-            <a class="navbar-item" href="#">
+            <a class="navbar-item" href="./landingpage.php">
                 <img src="img/strategy.svg" width="112" height="26" alt="Logo por ahora">
             </a>
 
@@ -46,11 +49,11 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-shutter-secondary" href="register.php">
-                            Únete
+                        <a class="button is-pgf-primary-dark" href="register.php">
+                            Registrarse
                         </a>
-                        <a class="button is-shutter-secondary" href="login.php">
-                            Inicia sesión
+                        <a class="button is-pgf-primary-dark" href="login.php">
+                            Iniciar sesión
                         </a>
                     </div>
                 </div>
@@ -85,7 +88,7 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
-                    <span id="nextmatches">Últimos partidos</span>
+                    <span id="nextmatches">Próximos partidos</span>
                 </h1>
 				<div class="columns">
 				<?php 
