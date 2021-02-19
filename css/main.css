@@ -10,3 +10,9 @@ body{
 .is-pgf-primary-dark{
 	background-color: #C65102;
 }
+.tarjetapartido{
+	width: 10px;
+	align-items: center;
+  	justify-content: center;	
+
+}

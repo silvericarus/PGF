@@ -2,7 +2,10 @@
  ?>
 <?php 
 	include "php/helpers.php";
-
+    $con = conectarBD();
+    $id = getId();
+    $user = getUser($id);
+    checkID($user["id"],"nologin");
  ?>
  <!DOCTYPE html>
  <html lang="es">
