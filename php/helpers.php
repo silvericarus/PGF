@@ -127,7 +127,7 @@
 
         <div id=\"navbarBasicExample\" class=\"navbar-menu\">
             <div class=\"navbar-start\">
-                <a class=\"navbar-item\" href=\"\">
+                <a class=\"navbar-item\" href=\"./teamData.php\">
                     Zona Equipo
                 </a>
 
@@ -142,7 +142,7 @@
             <div class=\"navbar-end\">
                 <div class=\"navbar-item\">
                     <div class=\"buttons\">
-                        <a class=\"button is-pgf-primary-dark\" href=\"\">
+                        <a class=\"button is-pgf-primary-dark\" href=\"../cerrarSesion.php\">
                             Cerrar sesión
                         </a>
                         <a class=\"button is-pgf-primary-dark\" href=\"./user_config.php\">
@@ -161,5 +161,25 @@
                 }
                 break;
         }
+    }
+
+    function calcularTiempoRestanteJugador($años_contrato,$fecha_contrato){
+        $fecha_contrato_datetime = new Datetime($fecha_contrato);
+        $fecha_final = $fecha_contrato_datetime->add(date_interval_create_from_date_string($años_contrato."years"));
+        $fecha_actual = new Datetime(date("Y-m-d")); 
+        $interval=$fecha_final->diff($fecha_actual);
+
+        # obtenemos la diferencia en meses
+
+        $intervalMeses=$interval->format("%m");
+
+        # obtenemos la diferencia en años y la multiplicamos por 12 para tener los meses
+
+        $intervalAnos = $interval->format("%y")*12;
+        $intervalArray[0] = $intervalAnos;
+        $intervalArray[1] = $intervalMeses;
+
+        return $intervalArray;
+
     }
 ?>
